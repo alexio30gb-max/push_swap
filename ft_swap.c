@@ -53,16 +53,3 @@ void ss(t_stack **a, t_stack **b)
     }
     write(1, "ss\n", 3);
 }
-
-void pa(t_stack **a, t_stack **b)
-{
-    t_stack *fb;
-
-    if (*b == NULL)
-        return ;
-    fb = *b;
-    *b = fb->next;
-    fb->next = *a;
-    *a = fb;
-    write(1, "pa\n", 3);
-}
